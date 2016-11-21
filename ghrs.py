@@ -1,3 +1,4 @@
+# Python 3.5.2
 # http://stackoverflow.com/questions/8646517/see-the-size-of-a-github-repo-before-cloning-it
 # https://developer.github.com/v3/repos/#get
 # http://www.python-requests.org/en/master/
@@ -19,4 +20,3 @@ for op, value in opts:
 r = requests.get('https://api.github.com/repos/' + owner + '/' + repo)
 if r.status_code == 200:
 	print(r.json()['size'])
-
