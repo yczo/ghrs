@@ -12,11 +12,11 @@ owner = ""
 repo = ""
 
 for op, value in opts:
-	if op == "-o":
-		owner = value
-	elif op == "-r":
-		repo = value
+    if op == "-o":
+        owner = value
+    elif op == "-r":
+        repo = value
 
 r = requests.get('https://api.github.com/repos/' + owner + '/' + repo)
 if r.status_code == 200:
-	print(r.json()['size'])
+    print(r.json()['size'])
